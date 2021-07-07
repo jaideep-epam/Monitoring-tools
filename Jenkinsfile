@@ -15,8 +15,8 @@ pipeline {
                 expression {  Tool == 'grafana'}
             }
             steps {
-                sh ''' echo FROM jasonrivers/nagios
-                        EXPOSE 9292 > dockerfile2
+                sh ''' echo "FROM jasonrivers/nagios
+                             EXPOSE 9292" > dockerfile3
                        docker build -t grafana-image dockerfile2
                        docker run -i -d -p 3000:3000 grafana-image '''
             }
