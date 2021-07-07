@@ -18,7 +18,7 @@ pipeline {
                 sh ''' 
 echo "FROM jasonrivers/nagios
 EXPOSE 3000" > dockerfile3
-                       docker build -f /var/lib/jenkins/workspace/Monitoring-tools-deployment/dockerfile3 -t nagios-image
+                       docker build -t /var/lib/jenkins/workspace/Monitoring-tools-deployment/dockerfile3 nagios-image
                        docker run -i -d -p 3000:3000 nagios-image '''
             }
     }
