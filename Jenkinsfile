@@ -22,7 +22,7 @@ pipeline {
             }
     }
 
-   stage ('4 choice') {
+   stage ('3 choice') {
       when {
                 expression {  Tool == 'zabbix'}
             }
