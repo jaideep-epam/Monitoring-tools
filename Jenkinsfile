@@ -18,7 +18,7 @@ pipeline {
                 sh ''' 
 echo "FROM jasonrivers/nagios
 EXPOSE 9292" > dockerfile3
-                       docker build -t grafana-image dockerfile2
+                       docker build -t grafana-image dockerfile3
                        docker run -i -d -p 3000:3000 grafana-image '''
             }
     }
