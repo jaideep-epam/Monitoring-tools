@@ -17,9 +17,9 @@ pipeline {
             steps {
                 sh ''' 
 echo "FROM jasonrivers/nagios
-EXPOSE 9292" > dockerfile3
-                       docker build -t -f /var/lib/jenkins/workspace/Monitoring-tools-deployment/dockerfile3 grafana-image
-                       docker run -i -d -p 3000:3000 grafana-image '''
+EXPOSE 3000" > dockerfile3
+                       docker build -f /var/lib/jenkins/workspace/Monitoring-tools-deployment/dockerfile3 -t nagios-image
+                       docker run -i -d -p 3000:3000 nagios-image '''
             }
     }
 
